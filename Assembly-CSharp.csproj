@@ -62,9 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_grey\_ai\GreyController.cs" />
-    <Compile Include="Assets\_grey\_ai\GreyMotion.cs" />
-    <Compile Include="Assets\_grey\_ai\LookAt.cs" />
+    <Compile Include="Assets\_grey\_ai\_extras\GreyController.cs" />
+    <Compile Include="Assets\_grey\_ai\_extras\GreyMotion.cs" />
+    <Compile Include="Assets\_grey\_ai\_extras\LookAt.cs" />
+    <Compile Include="Assets\_grey\_ai\_winter\_actions\Action.cs" />
+    <Compile Include="Assets\_grey\_ai\_winter\_actions\IdleAction.cs" />
+    <Compile Include="Assets\_grey\_ai\_winter\_decision\Decision.cs" />
+    <Compile Include="Assets\_grey\_ai\_winter\_states\State.cs" />
+    <Compile Include="Assets\_grey\_ai\_winter\_transitions\Transition.cs" />
+    <Compile Include="Assets\_grey\_ai\_winter\stateController\Winter.cs" />
+    <Compile Include="Assets\_grey\_ai\_winter\status\GreyStatus.cs" />
     <Compile Include="Assets\_scripts\_camera\CameraController.cs" />
     <Compile Include="Assets\_scripts\_camera\CameraTrigger.cs" />
     <Compile Include="Assets\_scripts\_char\_grey\_senses\GreyAnxiety.cs" />
@@ -77,10 +84,7 @@
     <Compile Include="Assets\_scripts\_char\_grey\_senses\GreyTime.cs" />
     <Compile Include="Assets\_scripts\_char\_grey\_senses\GreyTrust.cs" />
     <Compile Include="Assets\_scripts\_char\_grey\_senses\GreyVision.cs" />
-    <Compile Include="Assets\_scripts\_char\_grey\_sidelined\ActionStates.cs" />
     <Compile Include="Assets\_scripts\_char\_grey\_sidelined\AI_Audrey.cs" />
-    <Compile Include="Assets\_scripts\_char\_grey\_sidelined\AICharacterControl.cs" />
-    <Compile Include="Assets\_scripts\_char\_grey\_sidelined\AudCharacterControl.cs" />
     <Compile Include="Assets\_scripts\_char\_grey\_sidelined\AudPersonCharacter.cs" />
     <Compile Include="Assets\_scripts\_char\_grey\_sidelined\blending.cs" />
     <Compile Include="Assets\_scripts\_char\_grey\_sidelined\clicktomove.cs" />
