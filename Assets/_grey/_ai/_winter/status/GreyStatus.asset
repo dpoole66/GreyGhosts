@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: GreyStatus
   m_EditorClassIdentifier: 
   visionRange: 10
-  isSeeing: 0
-  lookSphereCastRadius: 0
-  hearingRange: 7
-  isHearing: 0
+  lookSphereCastRadius: 1
+  hearingRange: 8
   touchRange: 1
-  isTouching: 0
-  visionLevel: 0
-  visionDamping: 0
+  alertRange: 0
+  alarmRange: 1
+  visionLevel: 1
+  visionDamping: 2
   hearingLevel: 0
   hearingDamping: 0
   touchDamping: 0

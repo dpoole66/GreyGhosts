@@ -4,31 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - painting
-  - spyCam
-  - greyEye
-  - ikBody
-  - ikEyeLashes
-  - audrey
-  - wall
-  - doorOutsideOpen
-  - doorInsideOpen
-  - doorInsideRightHand
-  - doorInsideTarget
-  - doorInsideLeftHand
-  - doorOutsideTarget
-  - door
-  - doorHinge
-  - desk
-  - desk_drawer
-  - window
-  - floor
-  - lamp
-  - righthand
-  - lefthand
-  - personalspace
-  - grey
-  - playerEye
+  - Shootable
   layers:
   - Default
   - TransparentFX
@@ -38,9 +14,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Lighting
+  - Ground
+  - Postprocessing
   - 
   - 
   - 
@@ -63,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

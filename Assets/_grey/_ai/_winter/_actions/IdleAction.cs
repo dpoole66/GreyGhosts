@@ -15,8 +15,35 @@ public class IdleAction : Action
     
     private void Idle(Winter controller){
 
-        controller.anim.SetBool("idle", true);
-        Debug.Log("I'm in the IDLE state");
+        Debug.Log("AWARE ACTION");
+
+        //RING COLOR
+        var main = controller.psRing.main;
+        main.startColor = Color.blue;
+        //main.loop = true;
+
+        ////DO WHILE
+        //do {
+
+        //    controller.psRing.Play();
+        //    controller.psBody.Play();
+        //    controller.psTop.Play();
+
+        //} while (controller.isMoveing == true);
+
+        if (controller.isMoveing) {
+
+            controller.psRing.Play();
+
+        }
+
+        if (controller.isIdle) {
+
+            //controller.psRing.Stop();
+            controller.psBody.Play();
+            controller.psTop.Play();
+
+        }
 
     }
 
