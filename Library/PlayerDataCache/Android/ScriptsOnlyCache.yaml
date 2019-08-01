@@ -2,35 +2,42 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ARRootScaler
+    - CountDown
+    - FadeIO
     - GoogleARCore.ARCoreBackgroundRenderer
     - GoogleARCore.ARCoreSession
     - GoogleARCore.ARCoreSessionConfig
     - GoogleARCore.EnvironmentalLight
-    - GoogleARCore.Examples.CloudAnchors.MultiplatformMeshSelector
-    - GoogleARCore.Examples.Common.DetectedPlaneGenerator
     - GoogleARCore.Examples.Common.DetectedPlaneVisualizer
     - GoogleARCore.Examples.Common.PlaneDiscoveryGuide
     - GoogleARCore.Examples.Common.PointcloudVisualizer
     - GoogleARCore.Examples.Common.RawImageVideoPlayer
-    - GoogleARCore.Examples.HelloAR.ARController
-    - GoogleARCore.Examples.HelloAR.HelloARController
+    - GoogleARCore.WinterAR
     - GreyStatus
     - IdleAction
+    - Lerper
+    - MoveingAction
+    - MoveingDecision
+    - PingPong
     - RealisticEyeMovements.EyeAndHeadAnimator
     - RealisticEyeMovements.LookTargetController
+    - SpawnEffect
     - State
     - Winter
+    - greyDustingFX
     NavMeshComponents.dll:
     - UnityEngine.AI.NavMeshSurface
-    NavMeshComponentsEditor.dll:
-    - UnityEditor.AI.NavMeshAssetManager
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationBlendTree.Node
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -45,10 +52,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
-    Assets/_scenes/ARC10.unity:
+    Assets/_scenes/GreyGhost.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -67,109 +72,85 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
+    - Class: 49
       Script: {instanceID: 0}
     - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9368}
+      Script: {instanceID: 9816}
     - Class: 114
-      Script: {instanceID: 9478}
+      Script: {instanceID: 9866}
     - Class: 114
-      Script: {instanceID: 9496}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 9528}
+      Script: {instanceID: 9874}
     - Class: 114
-      Script: {instanceID: 9530}
+      Script: {instanceID: 9880}
     - Class: 114
-      Script: {instanceID: 9536}
+      Script: {instanceID: 9888}
     - Class: 114
-      Script: {instanceID: 9542}
+      Script: {instanceID: 9910}
     - Class: 114
-      Script: {instanceID: 9550}
+      Script: {instanceID: 9924}
     - Class: 114
-      Script: {instanceID: 9572}
+      Script: {instanceID: 9926}
     - Class: 114
-      Script: {instanceID: 9586}
-    - Class: 114
-      Script: {instanceID: 9588}
-    - Class: 114
-      Script: {instanceID: 9752}
-    - Class: 114
-      Script: {instanceID: 9904}
-    - Class: 114
-      Script: {instanceID: 10020}
-    - Class: 114
-      Script: {instanceID: 10024}
-    - Class: 114
-      Script: {instanceID: 10038}
-    - Class: 114
-      Script: {instanceID: 10098}
-    - Class: 114
-      Script: {instanceID: 10114}
-    - Class: 114
-      Script: {instanceID: 10264}
-    - Class: 114
-      Script: {instanceID: 10442}
-    - Class: 114
-      Script: {instanceID: 10544}
+      Script: {instanceID: 10580}
     - Class: 114
       Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 10682}
+      Script: {instanceID: 10616}
     - Class: 114
-      Script: {instanceID: 10752}
+      Script: {instanceID: 10762}
     - Class: 114
-      Script: {instanceID: 10852}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 11004}
     - Class: 114
-      Script: {instanceID: 11046}
+      Script: {instanceID: 11158}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 59038}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 59044}
+      Script: {instanceID: 11728}
+    - Class: 114
+      Script: {instanceID: 11794}
+    - Class: 114
+      Script: {instanceID: 11814}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 11970}
+    - Class: 114
+      Script: {instanceID: 12674}
+    - Class: 114
+      Script: {instanceID: 12826}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 137
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 213
-      Script: {instanceID: 0}
-    - Class: 220
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 238
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -178,6 +159,24 @@ ScriptsOnlyBuild:
     - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: a1f19ad47d3094e235f21b74dfc423a8
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessLayer
+  - hash:
+      serializedVersion: 2
+      Hash: 726fcf7961cbb4108aa5be5e55b8c8bf
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ColorGrading
+  - hash:
+      serializedVersion: 2
+      Hash: b13de7a0a457cb8e026d4237dc1b5797
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: LensDistortion
   - hash:
       serializedVersion: 2
       Hash: 984dcc0ba3707b7691fbdca8ff508d28
@@ -190,6 +189,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GreyMotion
+  - hash:
+      serializedVersion: 2
+      Hash: 8c328a0ffa03c1bcb9332bb39f4f8453
+    assemblyName: Unity.RenderPipelines.Core.Runtime.dll
+    namespaceName: UnityEngine.Rendering
+    className: Volume
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -222,6 +227,12 @@ ScriptsOnlyBuild:
     className: NavMeshModifier
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AlertAction
+  - hash:
+      serializedVersion: 2
       Hash: c8c672fee8a258266e51b55a210b8083
     assemblyName: NavMeshComponents.dll
     namespaceName: UnityEngine.AI
@@ -232,6 +243,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
     className: MultiplatformMeshSelector
+  - hash:
+      serializedVersion: 2
+      Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Bloom
   - hash:
       serializedVersion: 2
       Hash: 5bd9a19c7b5f76c563418e28f48a561b
@@ -246,10 +263,22 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: af93f9c42e90877a9ba31e37adfd900c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: MotionBlur
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.Common
     className: SafeAreaScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AlarmAction
   - hash:
       serializedVersion: 2
       Hash: 04e4a8b0447477cc4e933d9e5311188f
@@ -276,6 +305,12 @@ ScriptsOnlyBuild:
     className: GreyTrust
   - hash:
       serializedVersion: 2
+      Hash: 0d9a7c489d562c828d060dd3ea618576
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Fader
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -300,7 +335,7 @@ ScriptsOnlyBuild:
     className: NetworkIdentity
   - hash:
       serializedVersion: 2
-      Hash: 64ddbb771a9c4fb74e41fb73fc8d5798
+      Hash: 982e8e4f8420e40f66bd5198cfdd38a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GreyStatus
@@ -502,6 +537,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorIsOpening
+  - hash:
+      serializedVersion: 2
+      Hash: f542c1afca5bb4022f91fdda19b8d622
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: DepthOfField
   - hash:
       serializedVersion: 2
       Hash: 9e70ecf91466f07d9bd649be625cae52
@@ -732,6 +773,18 @@ ScriptsOnlyBuild:
     className: LookTargetController
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AlertDecision
+  - hash:
+      serializedVersion: 2
+      Hash: 63d7b9b64a11859f416d72ba9a3c3fec
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ScreenSpaceReflections
+  - hash:
+      serializedVersion: 2
       Hash: bc730a854cba4be52db358ca9d4efce4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -754,6 +807,30 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 38bcb4d3f9a1812fd650f92e87a4cf64
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessProfile
+  - hash:
+      serializedVersion: 2
+      Hash: e83ff956587639070cc6a114e2c37f29
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_SwapShirts
+  - hash:
+      serializedVersion: 2
+      Hash: f5be4795c7405989894b1e1633989f8d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_SwitchBakedObjectsTexture
+  - hash:
+      serializedVersion: 2
+      Hash: e82c0521cdfe8cb6a168ef7208a98d4a
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Vignette
   - hash:
       serializedVersion: 2
       Hash: 1e9c409e29cdc019c5521daf5eb17010
@@ -798,6 +875,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 4038bc28e8a2261132c560f3ef4f4221
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_MeshBakerGrouper
+  - hash:
+      serializedVersion: 2
       Hash: 52bcb9c2a78bdd8d98a59e915c346e75
     assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
     namespaceName: UnityEngine.XR.LegacyInputHelpers
@@ -808,6 +891,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveingAction
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -852,6 +941,12 @@ ScriptsOnlyBuild:
     className: GreyAnxiety
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AdjustTimeScale
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -870,22 +965,46 @@ ScriptsOnlyBuild:
     className: Audrey3PCharacter
   - hash:
       serializedVersion: 2
+      Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessEffectSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_PrepareObjectsForDynamicBatchingDescription
+  - hash:
+      serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 38bb791730667702075d550db58ee500
+      Hash: 164253026dd29866a547e31296e4a41e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Winter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LookingAction
   - hash:
       serializedVersion: 2
       Hash: 1444c351d4179adea9b5c651bf15893f
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.HelloAR
     className: HelloARController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AlarmDecision
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -912,6 +1031,24 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 97b77ddb523d4ca4e02ba7e0ea3182a6
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_BatchPrefabBaker
+  - hash:
+      serializedVersion: 2
+      Hash: 66bca5cc6a18c5298ec75235e56a84d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BakeTexturesAtRuntime
+  - hash:
+      serializedVersion: 2
+      Hash: 761f986c1ec31fcff021beecf477b964
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FadeIO
+  - hash:
+      serializedVersion: 2
       Hash: 0451019579614cc079b33f5be5df7244
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
@@ -930,10 +1067,22 @@ ScriptsOnlyBuild:
     className: NetworkLobbyManager
   - hash:
       serializedVersion: 2
+      Hash: 90971f1bdd8661abdc1262bc4cfe9b1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Lerper
+  - hash:
+      serializedVersion: 2
       Hash: 7299a528424874bcf6b5736b5305ac37
     assemblyName: NavMeshComponents.dll
     namespaceName: UnityEngine.AI
     className: NavMeshModifierVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ChromaticAberration
   - hash:
       serializedVersion: 2
       Hash: 5887ef1bc706b22b773d253fd443ceef
@@ -942,10 +1091,34 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LookTimeDecision
+  - hash:
+      serializedVersion: 2
+      Hash: dc0bcfaff001ddf1fb8a04ef291e91fb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GoogleARCore.Examples.HelloAR
+    className: ARController
+  - hash:
+      serializedVersion: 2
+      Hash: 31cfdf0c2a0b16d8d8362cd460594181
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CountDown
+  - hash:
+      serializedVersion: 2
       Hash: b818207c0b8a805931f7a7989870283e
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore
     className: ARCoreBackgroundRenderer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LookDecision
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -958,6 +1131,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorState
+  - hash:
+      serializedVersion: 2
+      Hash: 51dcd9b2f7f676b61e8e1af40133d949
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ARRootScaler
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -996,6 +1175,12 @@ ScriptsOnlyBuild:
     className: NetworkManager
   - hash:
       serializedVersion: 2
+      Hash: d6fc8d3165070298511ec776ea575626
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessResources
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1008,10 +1193,28 @@ ScriptsOnlyBuild:
     className: PointcloudVisualizer
   - hash:
       serializedVersion: 2
+      Hash: 498da3fe40fc83ad3a4de930efd7d267
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProximityActivate
+  - hash:
+      serializedVersion: 2
+      Hash: a53651ee3996fbba20dfe0fce02f0b23
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AutoExposure
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.ProGrids.dll
+    namespaceName: UnityEngine.ProGrids
+    className: IgnoreSnap
   - hash:
       serializedVersion: 2
       Hash: 9ade186206819ba1972efa339450d56c
@@ -1028,8 +1231,20 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_BatchPrepareObjectsForDynamicBatchingDescription
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
     className: AnchorController
+  - hash:
+      serializedVersion: 2
+      Hash: 3d7aaa4232b4c665fa4cebc45afaef7f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RigidMovement
   - hash:
       serializedVersion: 2
       Hash: 1ab92b1501bff4203df13dd5880207c1
@@ -1038,10 +1253,22 @@ ScriptsOnlyBuild:
     className: ARCoreAugmentedFaceRig
   - hash:
       serializedVersion: 2
+      Hash: 50c443b12ccc0b475183318b5088bcc5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessDebug
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 4d51d5ccf37d2089bdfe827617b784ff
+    assemblyName: Unity.RenderPipelines.Core.Runtime.dll
+    namespaceName: UnityEngine.Rendering
+    className: VolumeProfile
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1068,10 +1295,28 @@ ScriptsOnlyBuild:
     className: EyeAndHeadAnimator
   - hash:
       serializedVersion: 2
+      Hash: 540e7a05fd65f4744a5ae2ee32d8a58e
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_MeshBaker
+  - hash:
+      serializedVersion: 2
       Hash: bfef855772e9c30376ca39aa05cdb282
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LookAt
+  - hash:
+      serializedVersion: 2
+      Hash: d0f7fb684948b079b861debb14bf28a7
+    assemblyName: MeshBakerCore.dll
+    namespaceName: DigitalOpus.MB.Core
+    className: MB3_Comment
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PingPong
   - hash:
       serializedVersion: 2
       Hash: 6a7a213db5fdf65e564c8dc0e3b03fba
@@ -1098,10 +1343,22 @@ ScriptsOnlyBuild:
     className: ObjectManipulationController
   - hash:
       serializedVersion: 2
+      Hash: d42ebca2fb541ad8390ba6c23acc3549
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_BoneWeightCopier
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkStartPosition
+  - hash:
+      serializedVersion: 2
+      Hash: bb1f0eabf586c59f439d232ff8a83b3b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleCharacterMotor
   - hash:
       serializedVersion: 2
       Hash: 1a673c6f1343d73687355665be133730
@@ -1140,6 +1397,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 5f1c217487e6a2f633c81fed22c69091
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpotLightController
+  - hash:
+      serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1168,6 +1431,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkMigrationManager
+  - hash:
+      serializedVersion: 2
+      Hash: 220bd265f54cc4cee8f1539ad2b2c64a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_DynamicAddDeleteExample
   - hash:
       serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
@@ -1206,6 +1475,18 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: a64b8ff703a69f3352c424e9d0bc1c49
+    assemblyName: Unity.RenderPipelines.Core.Runtime.dll
+    namespaceName: UnityEngine.Rendering
+    className: VolumeComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 36808e0bceda2a44a651d2c754474786
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnEffect
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1230,10 +1511,28 @@ ScriptsOnlyBuild:
     className: AI_Audrey
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_ExampleSkinnedMeshDescription
+  - hash:
+      serializedVersion: 2
+      Hash: 42cce78e5ed81d21314a1b4fd69deaaa
+    assemblyName: MeshBakerCore.dll
+    namespaceName: DigitalOpus.MB.Core
+    className: MB3_MeshCombinerSettings
+  - hash:
+      serializedVersion: 2
       Hash: b9f83b3735af289167e1e6f7bc381d39
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
     className: CloudAnchorsExampleController
+  - hash:
+      serializedVersion: 2
+      Hash: 8860633d29a22ff64e02e18da3716cdf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityTemplateProjects
+    className: SimpleCameraController
   - hash:
       serializedVersion: 2
       Hash: 40eab39826f66889566d3a3e6ef95673
@@ -1252,6 +1551,24 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorOpenInside
+  - hash:
+      serializedVersion: 2
+      Hash: 4c457c2dab614c1637010774b7bf4436
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB2_TextureBakeResults
+  - hash:
+      serializedVersion: 2
+      Hash: 58e68364412c67eae2bdb4954be2dcc2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Readme
+  - hash:
+      serializedVersion: 2
+      Hash: 9a3a586cc9690a4be28ab93d13feb2ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_Example
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1332,6 +1649,18 @@ ScriptsOnlyBuild:
     className: GPS
   - hash:
       serializedVersion: 2
+      Hash: ad994f7a45b5b5694af38a65bf799cf8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_SkinnedMeshSceneController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FadeAction
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.Common
@@ -1366,6 +1695,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkDiscovery
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB2_UpdateSkinnedMeshBoundsFromBones
   - hash:
       serializedVersion: 2
       Hash: 893dbdbfe611d62e230a686ea89f1efd
@@ -1404,6 +1739,18 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
+      Hash: 93376649573e562d06247140da7ea9a8
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB2_UpdateSkinnedMeshBoundsFromBounds
+  - hash:
+      serializedVersion: 2
+      Hash: 6e650ef9d456901462805aebfa89d9ab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MB_ExampleMover
+  - hash:
+      serializedVersion: 2
       Hash: 3d8b285052194ccec1bb519a84382ff7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1420,6 +1767,24 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoorIsOpen
+  - hash:
+      serializedVersion: 2
+      Hash: 0cbc0eaeef7c94694e2caa8b3aee5855
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GoogleARCore
+    className: WinterAR
+  - hash:
+      serializedVersion: 2
+      Hash: d5630f96bd5a6a6eed7e1754c3fb8703
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessVolume
+  - hash:
+      serializedVersion: 2
+      Hash: d0987ce3e9092dbe0fa30d73f333fffa
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Grain
   - hash:
       serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
@@ -1440,10 +1805,22 @@ ScriptsOnlyBuild:
     className: AudreySimpleController
   - hash:
       serializedVersion: 2
+      Hash: b15db1f3ad6df47824e71e6f8b6db653
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_AtlasPackerRenderTexture
+  - hash:
+      serializedVersion: 2
       Hash: 9fef59ab23777a9e0eae7c8fd5edb8cb
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Characters.ThirdPerson
     className: AIAudreyControl
+  - hash:
+      serializedVersion: 2
+      Hash: ac6acd886c54c48c599ab5fed5781ea7
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AmbientOcclusion
   - hash:
       serializedVersion: 2
       Hash: a6be390312032ba0856f81fc3c448644
@@ -1458,6 +1835,12 @@ ScriptsOnlyBuild:
     className: AudGPS
   - hash:
       serializedVersion: 2
+      Hash: 7b3216bb34fdd4bb3a48518a010216c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RampAsset
+  - hash:
+      serializedVersion: 2
       Hash: 9b895dcabbc1faf095c000c32d471fd0
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -1468,6 +1851,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkManagerHUD
+  - hash:
+      serializedVersion: 2
+      Hash: 7c4359276e0931d49559d797a137fbb6
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_TextureBaker
   - hash:
       serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
@@ -1482,10 +1871,28 @@ ScriptsOnlyBuild:
     className: ikPointGesture
   - hash:
       serializedVersion: 2
+      Hash: d5a5e05321186d898d104cfd899acb5f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: greyDustingFX
+  - hash:
+      serializedVersion: 2
+      Hash: dbcac2098af15c0f248ad872f240ea09
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_DisableHiddenAnimations
+  - hash:
+      serializedVersion: 2
       Hash: 21e871d89bbce53c038fc75ad1b7c7f3
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
     className: CloudAnchorsNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 7897eb112121c6391442fdaec2ab7517
+    assemblyName: MeshBakerCore.dll
+    namespaceName: 
+    className: MB3_MultiMeshBaker
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -1494,29 +1901,35 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: c337b9100d2ddf11a70b2d8f93b4a001
+    assemblyName: MeshBakerCore.dll
+    namespaceName: DigitalOpus.MB.Core
+    className: MB_BlendShape2CombinedMap
+  - hash:
+      serializedVersion: 2
       Hash: 8b5b4efe043d6e706d0254ca5fc13e56
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PersonalSpace
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FadeDecision
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveingDecision
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 4d6d9787b2b2d4fd9a9f057cb14f90cc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ARRootScaler
-  - hash:
-      serializedVersion: 2
-      Hash: dc0bcfaff001ddf1fb8a04ef291e91fb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: GoogleARCore.Examples.HelloAR
-    className: ARController
   platform: 13
   scenePathNames:
-  - Assets/_scenes/ARC10.unity
-  playerPath: C:/Users/dpool/Documents/_GameLab/GreyGhosts/_builds/G2.apk
+  - Assets/_scenes/GreyGhost.unity
+  playerPath: C:/Users/dpool/Documents/_GameLab/GreyGhosts/_builds/GGhost.apk

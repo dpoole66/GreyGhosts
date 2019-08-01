@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GoogleARCore.Examples.HelloAR;
+using GoogleARCore;
 
 public class ARRootScaler : MonoBehaviour {
 
-    Transform ARRoot;
-    public ARController ARController;
+    public WinterAR ARController;
 
  
 	void Start () {
 
-        //ARController = GetComponent<DebugScaler>();
+        // = GameObject.FindGameObjectsWithTag("arroot").GetComponent<WinterAR>();
 
 	}
 	
 
 	void Update () {
 
-        this.transform.localScale = new Vector3(ARController.ARScale, ARController.ARScale, ARController.ARScale);
+        this.transform.localScale = new Vector3(ARController.arScaleFactor, ARController.arScaleFactor, ARController.arScaleFactor);
 
     }
 }

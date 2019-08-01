@@ -23,3 +23,6 @@ MonoBehaviour:
   hearingLevel: 0
   hearingDamping: 0
   touchDamping: 0
+  moveSpeed: 1
+  torqueAmount: 500
+  rotationSpeed: 40

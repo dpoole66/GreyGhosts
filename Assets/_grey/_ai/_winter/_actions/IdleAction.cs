@@ -15,35 +15,18 @@ public class IdleAction : Action
     
     private void Idle(Winter controller){
 
-        Debug.Log("AWARE ACTION");
+        Debug.Log("IDLE ACTION");
 
-        //RING COLOR
-        var main = controller.psRing.main;
-        main.startColor = Color.blue;
-        //main.loop = true;
+        ////STOP AGENT
+        //if(!controller.agent.pathPending && controller.agent.remainingDistance <= controller.agent.stoppingDistance){
 
-        ////DO WHILE
-        //do {
+        //    controller.agent.destination = controller.agent.destination;
+        //    controller.agent.updatePosition = false;
+        //    controller.agent.updateRotation = false;
+        //    controller.agent.isStopped = true;
 
-        //    controller.psRing.Play();
-        //    controller.psBody.Play();
-        //    controller.psTop.Play();
+        //}
 
-        //} while (controller.isMoveing == true);
-
-        if (controller.isMoveing) {
-
-            controller.psRing.Play();
-
-        }
-
-        if (controller.isIdle) {
-
-            //controller.psRing.Stop();
-            controller.psBody.Play();
-            controller.psTop.Play();
-
-        }
 
     }
 

@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - lefthand
+  - righthand
+  - playerEye
+  - floor
+  - grey
+  - greyMesh
+  - greyEye
+  - wall
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class Winter : MonoBehaviour {
+
     //STATE AND FEEDBACK: 
     [Header("Current State Update: ")]
     public State currentState;
@@ -14,6 +15,8 @@ public class Winter : MonoBehaviour {
     [Header("Required Components: ")]
     public GreyStatus status;
     public Transform greyEyes;
+    public Rigidbody rb;
+    public NavMeshAgent agent;
 
     [Header("Timer: ")]
     public float countdown;
@@ -26,19 +29,20 @@ public class Winter : MonoBehaviour {
 
     [Header("Get Player: ")]
     public Transform player;
+    Vector3 relativePlayerPos;
 
-    ////FADEING
-    //[Header("Meshes to Fade: ")]
-    //public SkinnedMeshRenderer[] fadeRenderers = new SkinnedMeshRenderer[7];
-    ////public SkinnedMeshRenderer fader;
+    [Header("Get Targets: ")]
+    public GameObject target;
+    Vector3 relativeTargetPos;
 
-    ////FADE TIMER AND BOOL
-    //[Header("Fade Timer and Bool: ")]
-    //public float fadeTime = 3f;
+    //ROTATION 
+    Quaternion deltaRotation;
+
+    [Header("Lerper: ")]
+    public Lerper lerper;
+
+    [Header("Fade In/Out bool: ")]
     public bool isFadeing;
-    //[HideInInspector] public Material m;
-    //[HideInInspector] public Color c;
-    //[HideInInspector] public Color t;
 
     //GHOSTING FX
     [Header("Grey Ghost FX:")]
@@ -54,6 +58,7 @@ public class Winter : MonoBehaviour {
     //RANGEFINDING
     [Header("Range Feedback: ")]
     public float range;
+    public float targetRange;
 
     //ALIVE BOOL, PUBLIC FOR DEBUG:
     [Header("Awareness Feedback: ")]
@@ -65,6 +70,7 @@ public class Winter : MonoBehaviour {
 
     //DEBUG PLAYER INPUT
     [Header("Movement Feedback: ")]
+    public bool goTo;
     public bool isMoveing;
     public bool isIdle;
     public bool isWalkingForward;
@@ -78,15 +84,13 @@ public class Winter : MonoBehaviour {
     public Text isState;
     public Text inRange;
 
-    //HIDDEN PUBLIC COMPONENTS AND VARIABLES: 
-    [HideInInspector] public NavMeshAgent agent;
+    //HIDDEN PUBLIC COMPONENTS AND VARIABLES:        
     [HideInInspector] public Animator anim;
     [HideInInspector] public float stateTimeElapsed;
 
     //BEFORE WE START, GET THE COMPONENTS WE NEED:
     private void Awake() {
 
-        agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
     }
@@ -132,45 +136,59 @@ public class Winter : MonoBehaviour {
         Debug.Log("Current State:  " + currentState.ToString());
 
         //RANGEFINDING
+        Vector3 target2d = new Vector3(target.transform.position.x, 0f, target.transform.position.z);
         Vector3 player2d = new Vector3(player.transform.position.x, 0f, player.transform.position.z);
         Vector3 winter2d = new Vector3(this.transform.position.z, 0f, this.transform.position.z);
         range = Vector3.Distance(player2d, winter2d);
-        //Debug.Log("Range:  " + range);
-
-        //SET MOVEING BOOLS
-        isMoveing = isWalkingForward || isWalkingBackward || isTurningLeft || isTurningRight;
-        isIdle = !isMoveing;
+        targetRange = Vector3.Distance(target2d, winter2d);
+        //Debug.Log("Target Range:  " + targetRange);
 
         //MECANIM SETTERS
         //IDLE
         anim.SetBool("idle", isIdle);
         //MOVEING
         anim.SetBool("moveing", isMoveing);
-        anim.SetBool("turnRight", isTurningRight);
-        anim.SetBool("turnLeft", isTurningLeft);
-        anim.SetBool("walkForward", isWalkingForward);
-        anim.SetBool("walkBackward", isWalkingBackward);
+
         //FEEDBACK STATES
         anim.SetBool("alert", isAlert);
 
-        //PLAYER INPUT DEBUG 
-        //RIGHT TURN
-        isTurningRight = Input.GetKey(KeyCode.RightArrow);
-        //LEFT TURN
-        isTurningLeft = Input.GetKey(KeyCode.LeftArrow);
-        //WALK FORWARD
-        isWalkingForward = Input.GetKey(KeyCode.UpArrow);
-        //WALK BACKWARD
-        isWalkingBackward = Input.GetKey(KeyCode.DownArrow);
-      
-        //LERP FADER
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        //MOVE AND ROTATE TOWARD PLAYER/TARGET 
+        relativePlayerPos = player2d - winter2d;
+        relativeTargetPos = target2d - winter2d;
 
-            //StartCoroutine(Timer());
+        //MOVE DEBUG
+        isIdle = !isMoveing;
+
+        if(Input.GetKey(KeyCode.Space)){
+
+            goTo = true;
 
         }
-      
+        if (Input.GetKeyUp(KeyCode.Space)) {
 
+            goTo = false;
+
+        }
+
+
+        ////// Pull character towards agent
+        Vector3 worldDeltaPosition = agent.nextPosition - this.transform.position;
+        //if (worldDeltaPosition.magnitude > agent.radius)
+        //transform.position = agent.nextPosition - 0.9f * worldDeltaPosition;
+
+        // Pull agent towards character
+        if (worldDeltaPosition.magnitude > agent.radius)
+            agent.nextPosition = transform.position + 0.9f * worldDeltaPosition;
+
+
+    }
+
+    void OnAnimatorMove() {
+        // Update position based on animation movement using navigation surface height
+        Debug.Log("AnimatorMove");
+        Vector3 position = anim.rootPosition;
+        position.y = agent.nextPosition.y;
+        this.transform.position = position;
     }
 
 
@@ -257,7 +275,6 @@ public class Winter : MonoBehaviour {
         stateTimeElapsed = 0f;
 
     }
-
 
 
 }

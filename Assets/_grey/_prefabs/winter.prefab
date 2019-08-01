@@ -47,6 +47,8 @@ GameObject:
   - component: {fileID: -3578151481688696263}
   - component: {fileID: 5244323661879872851}
   - component: {fileID: 6475764310842439879}
+  - component: {fileID: 2773270876166734795}
+  - component: {fileID: 1110416969763233485}
   m_Layer: 0
   m_Name: winter
   m_TagString: Untagged
@@ -667,35 +669,30 @@ MonoBehaviour:
   remainState: {fileID: 11400000, guid: 04e3c5cbcf0cadb40948af7f4aaa5c8e, type: 2}
   status: {fileID: 11400000, guid: fdac6f547db4d2f4ea554a1c2380b12c, type: 2}
   greyEyes: {fileID: 7827558148982559804}
-  timer: 0
+  rb: {fileID: 5016879677198575969}
+  agent: {fileID: 2773270876166734795}
+  countdown: 0
   startTime: 0
   timerStarted: 0
   timerEnded: 0
   lookTargeting: {fileID: -6281698893273695247}
   player: {fileID: 0}
-  fadeRenderers:
-  - {fileID: 7347221466209405493}
-  - {fileID: 1201780661383791429}
-  - {fileID: 2208645850415143419}
-  - {fileID: 8888045936511216368}
-  - {fileID: 221962895105963933}
-  - {fileID: 6445151006513698175}
-  - {fileID: 5430367788114737393}
-  fadeTime: 3
+  target: {fileID: 0}
+  lerper: {fileID: 0}
   isFadeing: 0
-  m: {fileID: 0}
-  c: {r: 0, g: 0, b: 0, a: 0}
   psBody: {fileID: 6186169380294435416}
   psTop: {fileID: 6276784282948989511}
   psBottom: {fileID: 6276784283173630896}
   psVapor: {fileID: 4903057273269937593}
   psRing: {fileID: 8488718615566588883}
   range: 0
+  targetRange: 0
   greyAlive: 0
   isSeeing: 0
   isHearing: 0
   isAlert: 0
   isAlarmed: 0
+  goTo: 0
   isMoveing: 0
   isIdle: 0
   isWalkingForward: 0
@@ -705,7 +702,6 @@ MonoBehaviour:
   isAlive: {fileID: 3418614167341365825}
   isState: {fileID: 6013457781411785832}
   inRange: {fileID: 3629005560395090486}
-  agent: {fileID: 0}
   anim: {fileID: 0}
   stateTimeElapsed: 0
 --- !u!135 &6475764310842439879
@@ -721,6 +717,48 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!195 &2773270876166734795
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17662077082274186}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1110416969763233485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17662077082274186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56bd585afd84ca439359ac8f6da248a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeMe:
+  - {fileID: 7347221466209405493}
+  - {fileID: 1201780661383791429}
+  - {fileID: 2208645850415143419}
+  - {fileID: 5430367788114737393}
+  - {fileID: 221962895105963933}
+  - {fileID: 6445151006513698175}
+  fadeTime: 3
 --- !u!1 &76095855537353939
 GameObject:
   m_ObjectHideFlags: 0

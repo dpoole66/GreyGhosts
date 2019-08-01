@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Lerper : MonoBehaviour{
 
+    [Header("Grey Status: ")]
+    public GreyStatus stats;
+
     [SerializeField]
     private float start = 0;
     [SerializeField]
@@ -27,21 +30,27 @@ public class Lerper : MonoBehaviour{
         if(Input.GetKeyDown(KeyCode.Space)){
 
             //isLerping = true;
-            StartCoroutine(Lerping(start, end, lerpTime));
+            StartCoroutine(Lerp(start, end, lerpTime));
 
         }
 
    
     }
 
+    public void LerpThis(){
 
-    IEnumerator Lerping(float start, float end, float duration) {
+        StartCoroutine(Lerp(0f, 1f, lerpTime));
+
+    }
+
+
+    IEnumerator Lerp(float start, float end, float duration) {
 
         while (true) {
 
             isLerping = true;
 
-            Debug.Log("Lerper" + "    Start:  " + start + "    End:  " + end + "    Duration:  " + duration + "    Is Lerping?  " + isLerping + "    t Time:   " + t + "   LerpOutput:    " + lerpOutput);
+            //Debug.Log("Lerper" + "    Start:  " + start + "    End:  " + end + "    Duration:  " + duration + "    Is Lerping?  " + isLerping + "    t Time:   " + t + "   LerpOutput:    " + lerpOutput);
 
             t += Time.deltaTime;
             duration = lerpTime;
@@ -52,7 +61,7 @@ public class Lerper : MonoBehaviour{
 
             if (lerpOutput >= end) {
 
-                Debug.Log("Break Lerper:  " + lerpOutput);
+                //Debug.Log("Break Lerper:  " + lerpOutput);
                 t = 0f;
                 isLerping = false;
 

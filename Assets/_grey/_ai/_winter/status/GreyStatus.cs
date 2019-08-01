@@ -33,5 +33,13 @@ public class GreyStatus : ScriptableObject
     [Header("TOUCH DEBUG")]
     public float touchDamping;
 
+    [Header("MOVEMENT")]
+    public float moveSpeed;
+    public float torqueAmount;
+
+    [Header("ROTATION")]
+    public float rotationSpeed;
+
+
 
 }
